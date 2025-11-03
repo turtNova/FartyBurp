@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManagerLogic : MonoBehaviour
 {
     public int playerScore;
-    public Text scoreText;
+    public TMP_Text scoreText;
     public GameObject gameOverScreen;
 
     void Start()
@@ -17,7 +18,14 @@ public class GameManagerLogic : MonoBehaviour
     public void addScore(int scoreToAdd)
     {
         playerScore += scoreToAdd;
-        scoreText.text = (playerScore.ToString());
+        PlayerPrefs.SetInt("highScore", PlayerPrefs.GetInt("highScore") + 1);
+        scoreText.text = (PlayerPrefs.GetInt("highScore").ToString());
+    }
+
+    [ContextMenu("Reset Score")]
+    public void resetScore()
+    {
+        PlayerPrefs.DeleteKey("highScore");
     }
 
     public void restartGame()
