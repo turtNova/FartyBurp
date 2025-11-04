@@ -21,7 +21,7 @@ public class DumbassFuckingBird : MonoBehaviour
             myFatFuckingRigidBody.linearVelocity = Vector2.up * antiGravity;
         }
 
-        if (Mathf.Abs(transform.position.y) > 4.5f)
+        if (Mathf.Abs(transform.position.y) > 16f)
         {
             logic.gameOver();
             birdIsFuckingDead = true;
