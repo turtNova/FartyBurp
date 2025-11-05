@@ -3,7 +3,7 @@ using UnityEngine;
 public class DumbassFuckingBird : MonoBehaviour
 {
     public Rigidbody2D myFatFuckingRigidBody;
-    public float antiGravity;
+    public float jumpForce;
     public GameManagerLogic logic;
     public bool birdIsFuckingDead = false;
 
@@ -18,7 +18,7 @@ public class DumbassFuckingBird : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) == true && !birdIsFuckingDead)
         {
-            myFatFuckingRigidBody.linearVelocity = Vector2.up * antiGravity;
+            myFatFuckingRigidBody.linearVelocity = Vector2.up * jumpForce;
         }
 
         if (Mathf.Abs(transform.position.y) > 16f)

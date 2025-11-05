@@ -6,11 +6,6 @@ public class PipeMiddle : MonoBehaviour
     public GameManagerLogic logic;
     public AudioSource SFX;
     public DumbassFuckingBird bird;
-    public GameObject topPipe;
-    public GameObject bottomPipe;
-    public GameObject middlePipe;
-
-    //float topPipeY = topPip
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
